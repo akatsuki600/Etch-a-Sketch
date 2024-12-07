@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DynaPuff, cursive;
+}
+
+body {
+    background-image:url(assets/paper.jpg);
+    background-size:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#sketchboard {
+    background-color: white;
+    border: 5px dotted black;
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+#sketchboard > div {
+    width: 16px;  
+    height: 16px;
+}
+
+.coloredDiv {
+    background-color: aqua;
+}
