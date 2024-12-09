@@ -20,3 +20,4 @@ It also lets you pick the background color.
 To let you pick a design from number of choices and lets you trace over it, like this : 
 https://www.crazygames.com/game/color-pixel-art-classic - ads ahead careful 
 
+* Responsiveness, this page is correctly works the best on a windows computer/laptop screen, I'll add responsiveness later as i learn more about it. 
