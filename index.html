@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="gameTitle">Etch-A-Sketch</h1>
+    <main>
+        <div id="styleOptionsBox">
+            <h2 class="optionsHeading borderAndBG">Choose Your Style</h2>
+            <div id="styleSelector" class="borderBox borderAndBG">
+                <div id="brushSelector" class="selectorBox">
+                    <h2>Pick A Brush</h2>
+                    <div id="brushes">
+                        <div id="eraserBrush" class="imageCircle borderAndBG "></div>
+                        <div id="paintBrush" class="imageCircle borderAndBG"></div>
+                    </div>
+                </div>
+                <div id="sizeSelector" class="selectorBox">
+                    <h2>Change Brush Size</h2>
+                    <div class="sizeSliderContainer">
+                        <span>1</span>
+                        <input type="range" min="1" max="100" value="50" class="sizeSlider">
+                        <span>100</span>
+                        <h4 id="brushSizeText">Brush Size: 50</h4>
+                    </div>
+                </div>
+                <div id="colorSelector" class="selectorBox">
+                    <h2 for="selectColor">Choose Paint Color</h2>
+                    <input type="color" id="selectColor" value="#ff0000" class="colorPicker" > 
+                </div>
+                <div class="selectorBox">
+                    <h2 for="selectBackgroundColor" >Choose Background Color</h2>
+                    <input type="color" id="selectBackgroundColor"value="#ffffff" class="colorPicker" >
+                </div>
+            </div>
+        </div>
+        <div id="sketchBoard" class="borderBox borderAndBG"></div>
+        <div>
+            <h2 class="optionsHeading borderAndBG">Settings</h2>
+            <div id="userSettings" class="borderBox borderAndBG">
+                <button id="resetBoard" class="button">Reset Board</button>
+                <button id="rainbowColors" class="button">Rainbow-mizer</button>
+                <button id="theCurse" class="button">The Curse</button>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

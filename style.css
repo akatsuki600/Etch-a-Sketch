@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: DynaPuff, sans-serif;
+    /* border: 5px solid red; */
+}
+
+body {
+    background-image: url(assets/seamless-paper-texture.webp);
+    background-size: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    animation-name: moveBackground;
+    animation-duration: 8s;
+    animation-timing-function: steps(4,jump-start);
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: center;
+    }
+    25% {
+        background-position: 100px;
+    }
+
+    50% {
+        background-position: 3700px;
+    }
+
+    75% {
+        background-position: 900px;
+    }
+
+    100% {
+        background-position: 100px;
+    }
+}
+
+#gameTitle { 
+    font-size: 5em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.selectorBox > h2  {
+   font-size: 2em;
+   margin: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+}
+
+.borderAndBG {
+    background-color: white;
+    border: 5px black solid;
+}
+
+.borderBox {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.optionsHeading {
+    display: inline-block;
+    border-bottom: none;
+    border-radius: 15px 15px 0px 0px;
+    position: relative;
+    top: 15px;
+    padding: 5px 10px 2px 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+
+#sketchBoard {
+    width: 640px;
+    height: 640px;
+    margin: 30px;
+}
+
+#brushes {
+    display: flex;
+    justify-content: center;
+}
+
+.imageCircle {
+    border-radius: 100%;
+    height: 8em;
+    width: 8em;
+    margin-right: 10px;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition-duration: 0.3s;
+    transition-timing-function:ease;
+}
+
+.imageCircle:hover {
+    background-size: 80%;
+}
+
+.imageCircle:active {
+    background-color: yellow;
+}
+
+
+#eraserBrush {
+    background-image: url(assets/eraser.png);
+
+}
+
+
+#paintBrush {
+    background-image: url(assets/paint-brush.png);
+}
+
+.selectorBox {
+    padding: 10px;
+}
+
+.sizeSliderContainer {
+    width: 100%;
+}
+
+.sizeSlider {
+    display: inline-block;
+    position:relative;
+    width: 80%;
+    appearance: none;
+    background-color: rgb(191, 191, 191);
+    border-radius: 5px;
+    height: 10px;
+}
+
+#brushSize {
+    font-weight: 400;
+    margin-top: 0.3em;
+}
+
+.sizeSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: rgb(28, 127, 232);
+    border-radius: 100%;
+    border: 2px solid black;
+    transition: 0.2s;
+    transition-timing-function: ease;
+}
+
+.sizeSlider::-webkit-slider-thumb:hover {
+    width: 30px;
+    height: 30px;
+}
+
+.colorPicker {
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 100%;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.colorPicker:hover {
+    width: 60px;
+    height: 60px;
+
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+  }
+
+  
+
+
+
+
+#userSettings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    font-size: 1.5em;
+    padding: 10px 15px 10px 15px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 25px;
+    transition-duration: 0.3s;
+    transition-timing-function:ease;
+}
+
+.button:hover {
+    font-size: 1.7em;
+}
+
+#resetBoard{
+    transition-duration: 0.2s;
+    transition-timing-function:ease;
+}
+
+#resetBoard:active {
+    color: white;
+}
+
+
+
+
+#rainbowColors {
+    background: rgb(254,14,135);
+    background: linear-gradient(28deg, rgba(254,14,135,1) 0%, rgba(253,62,74,1) 25%, rgba(252,176,69,1) 50%, rgba(1,234,131,1) 75%, rgba(1,106,254,1) 100%);
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+#rainbowColors:active {
+    background: rgb(254,14,135);
+    background: linear-gradient(128deg, rgba(254,14,135,1) 0%, rgba(253,62,74,1) 25%, rgba(252,176,69,1) 50%, rgba(1,234,131,1) 75%, rgba(1,106,254,1) 100%);
+}
+
+#theCurse {
+    background: rgb(133,0,0);
+    background: linear-gradient(90deg, rgba(133,0,0,1) 0%, rgba(255,0,52,1) 100%);
+    color: white;
+}
+
+#theCurse:active {
+    background: rgb(133,0,0);
+    background: linear-gradient(90deg, rgba(133,0,0,1) 0%, rgba(255,0,52,1) 100%);
+    color: red;
+    text-shadow: 4px 4px 5px rgb(0, 0, 0);
+    
+}
+
