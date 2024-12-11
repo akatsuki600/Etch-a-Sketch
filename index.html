@@ -9,6 +9,8 @@
 </head>
 <body>
     <h1 id="gameTitle">Etch-A-Sketch</h1>
+    <pre>Choose a color and click on board to start painting
+        & click again to stop</pre>
     <main>
         <div id="styleOptionsBox">
             <h2 class="optionsHeading borderAndBG">Choose Your Style</h2>
@@ -23,24 +25,39 @@
                 <div id="sizeSelector" class="selectorBox">
                     <h2>Change Brush Size</h2>
                     <div class="sizeSliderContainer">
-                        <span>1</span>
-                        <input type="range" min="1" max="100" value="50" class="sizeSlider">
+                        <span>10</span>
+                        <input type="range" min="10" max="100" value="10" class="sizeSlider">
                         <span>100</span>
-                        <h4 id="brushSizeText">Brush Size: 50</h4>
+                        <h4 id="brushSizeText">Brush Size: 10</h4>
                     </div>
                 </div>
-                <div id="colorSelector" class="selectorBox">
-                    <h2 for="selectColor">Choose Paint Color</h2>
-                    <input type="color" id="selectColor" value="#ff0000" class="colorPicker" > 
-                </div>
                 <div class="selectorBox">
-                    <h2 for="selectBackgroundColor" >Choose Background Color</h2>
-                    <input type="color" id="selectBackgroundColor"value="#ffffff" class="colorPicker" >
+                    <h2 for="paintColor">Choose Paint Color</h2>
+                    <input type="color" id="paintColor" value="#ff0000" class="colorPicker" > 
+                </div>
+                <div class="selectorBox colorSelector">
+                    <h2 for="backgroundColor" >Choose Background Color</h2>
+                    <input type="color" id="backgroundColor"value="#ffffff" class="colorPicker" >
                 </div>
             </div>
         </div>
-        <div id="sketchBoard" class="borderBox borderAndBG"></div>
+        <div id="sketchBoardContainer" class="borderAndBG" >
+            <div id="sketchBoard">
+                <div></div>
+            </div>
+        </div>
         <div>
+            <div>
+                <h2 class="optionsHeading borderAndBG">Info</h2>
+                <div id="userSettings" class="borderBox borderAndBG">
+                    <ul style="text-align: left;">
+                        <li>Click to Start & Stop</li>
+                        <li>Changing Size or Color Will Reset Board</li>
+                        <li>Effects are not implemented currently</li>
+
+                    </ul>
+                </div>
+            </div>
             <h2 class="optionsHeading borderAndBG">Settings</h2>
             <div id="userSettings" class="borderBox borderAndBG">
                 <button id="resetBoard" class="button">Reset Board</button>
@@ -49,6 +66,7 @@
             </div>
             
         </div>
+       
     </main>
 </body>
 </html>

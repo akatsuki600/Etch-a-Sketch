@@ -16,8 +16,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
     animation-name: moveBackground;
+    height: 90vh;
     animation-duration: 8s;
     animation-timing-function: steps(4,jump-start);
     animation-iteration-count: infinite;
@@ -49,6 +49,10 @@ body {
     font-weight: 700;
 }
 
+pre {
+    font-size: 1.5em;
+}
+
 h2 {
     font-size: 1.5em;
     font-weight: 400;
@@ -64,6 +68,7 @@ main {
     justify-content: space-evenly;
     align-items: center;
     height: 70vh;
+    flex-wrap: wrap;
 }
 
 .borderAndBG {
@@ -90,11 +95,31 @@ main {
 }
 
 
-#sketchBoard {
-    width: 640px;
-    height: 640px;
+#sketchBoardContainer {
+    position: relative;
+    width: 610px;
+    height: 610px;
     margin: 30px;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
 }
+
+#sketchBoard {
+    display: flex;
+    flex-flow: wrap;
+    width: 680px;
+    position: absolute;
+    overflow: hidden;
+    size: 10000px;
+}
+
+#sketchBoard > div {
+    /* border: solid black 1px; */
+    width: 10px;
+    height: 10px;
+}
+
 
 #brushes {
     display: flex;
@@ -195,11 +220,6 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 4px;
   }
 
-  
-
-
-
-
 #userSettings {
     display: flex;
     flex-direction: column;
@@ -229,9 +249,6 @@ input[type="color"]::-webkit-color-swatch {
     color: white;
 }
 
-
-
-
 #rainbowColors {
     background: rgb(254,14,135);
     background: linear-gradient(28deg, rgba(254,14,135,1) 0%, rgba(253,62,74,1) 25%, rgba(252,176,69,1) 50%, rgba(1,234,131,1) 75%, rgba(1,106,254,1) 100%);
@@ -257,4 +274,3 @@ input[type="color"]::-webkit-color-swatch {
     text-shadow: 4px 4px 5px rgb(0, 0, 0);
     
 }
-
